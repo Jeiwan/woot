@@ -1,6 +1,6 @@
 # woot
 
-A simple application that demonstrate usage of Clojure + ClojureScript + Reagent.
+A simple application that demonstrates usage of Clojure + ClojureScript + Reagent.
 
 ```
 lein ring server-headless
