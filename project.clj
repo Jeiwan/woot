@@ -5,7 +5,8 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.521"]
                  [compojure "1.5.1"]
-                 [ring/ring-defaults "0.2.1"]]
+                 [ring/ring-defaults "0.2.1"]
+                 [hiccup "2.0.0-alpha1"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-cljsbuild "1.1.6"]]
   :ring {:handler woot.handler/app}

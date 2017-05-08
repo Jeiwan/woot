@@ -1,10 +1,20 @@
 (ns woot.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+            [hiccup.page :refer [html5]]))
+
+(def main-page
+  (html5
+   [:head
+    [:meta {:charset "utf-8"}]
+    [:title "WO_OT!"]]
+   [:body
+    [:h1 "WO_OT!"]]
+   [:script {:src "/js/js.js"}]))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World")
+  (GET "/" [] main-page)
   (route/not-found "Not Found"))
 
 (def app
