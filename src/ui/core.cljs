@@ -1,3 +1,7 @@
-(ns ui.core)
+(ns ui.core
+  (:require [reagent.core :as r]
+            [ui.components.basic :as basic]))
 
-(js/alert "Hello?")
+(r/render
+ [basic/component]
+ (.getElementById js/document "container"))

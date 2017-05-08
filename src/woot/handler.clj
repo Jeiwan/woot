@@ -10,7 +10,7 @@
     [:meta {:charset "utf-8"}]
     [:title "WO_OT!"]]
    [:body
-    [:h1 "WO_OT!"]]
+    [:div {:id "container"}]]
    [:script {:src "/js/js.js"}]))
 
 (defroutes app-routes
