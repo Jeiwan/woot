@@ -1,0 +1,1 @@
+{:rename-macros {}, :renames {}, :externs {alert {}}, :use-macros {}, :excludes #{}, :name ui.core, :imports nil, :requires nil, :uses nil, :require-macros nil, :doc nil}

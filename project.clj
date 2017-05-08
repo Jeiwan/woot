@@ -8,10 +8,15 @@
                  [ring/ring-defaults "0.2.1"]
                  [hiccup "2.0.0-alpha1"]]
   :plugins [[lein-ring "0.9.7"]
-            [lein-cljsbuild "1.1.6"]]
+            [lein-cljsbuild "1.1.6"]
+            [lein-figwheel "0.5.9"]]
   :ring {:handler woot.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.0"]]}}
-  :cljsbuild {:builds [{:source-paths ["src/ui"]
-                        :compiler {:output-to "resources/public/js/js.js"}}]})
+  :cljsbuild {:builds [{:id "js"
+                        :source-paths ["src/ui"]
+                        :figwheel true
+                        :compiler {:output-to "resources/public/js/js.js"
+                                   :main "ui.core"
+                                   :asset-path "js/out"}}]})
